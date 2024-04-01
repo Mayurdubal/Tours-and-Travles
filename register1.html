@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="styles1.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles1.css">
+
+</head>
+<style>
+body {
+  background-image: url('./agra.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
+<div class="container">
+
+<form method="post" action ="http://localhost/flight.php">
+
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">enter  information</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="Enter FullName" name ="t1">
+                </div>
+                <div class="inputBox">
+                    <span>Email :</span>
+                    <input type="email" placeholder="Enter Email ID" name ="t2">
+                </div>
+
+
+<div class="inputBox">
+                    <span>Enter Mobile no:</span>
+                    <input type="text" placeholder="Enter Mobile No" name ="t3">
+                </div>
+
+
+
+<div class="inputBox">
+                    <span>Adhar no:</span>
+                    <input type="text" placeholder="Enter Aadhar cardNo" name ="t4">
+                </div>
+
+<div class="inputBox">
+                    <span>From:</span>
+                    <input type="text" placeholder="pune" name ="t5">
+                </div>
+
+
+
+             <div class="inputBox">
+                    <span>To:</span>
+                    <input type="text" placeholder="" name ="t6">
+                </div>
+
+  <div class="inputBox">
+                    <span>Departure date:</span>
+                    <input type="date" placeholder="Enter Departure Date" name ="t7">
+                </div>
+
+  <div class="inputBox">
+                    <span>Returning date date:</span>
+                    <input type="date" placeholder="Enter Returning Date" name ="t8">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Adults:</span>
+                        <input type="number" placeholder="" name ="t9">
+                    </div>
+                    <div class="inputBox">
+                        <span>childrens :</span>
+                        <input type="number" placeholder="" name ="t10">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+
+    </form>
+
+</div>    
+    
+</body>
+</html>

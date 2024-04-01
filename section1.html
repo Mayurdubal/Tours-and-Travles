@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .slider {
+            width: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            width: 50%;
+            flex: 0 0 auto;
+        }
+        .slide img {
+            width:100%;
+            height: auto;
+        }
+        .btn-prev,
+        .btn-next {
+            position: absolute;
+            top: 150%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #873d3d;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn-prev {
+            left: 30px;
+        }
+        .btn-next {
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="shimla.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="tirumala.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="mumbai1.jpg" alt="Image 3"></div>
+       
+    </div>
+    <button class="btn-prev">&#10094;</button>
+    <button class="btn-next">&#10095;</button>
+</div>
+
+<script>
+    const slides = document.querySelector('.slides');
+    const slideWidth = document.querySelector('.slide').clientWidth;
+    const btnPrev = document.querySelector('.btn-prev');
+    const btnNext = document.querySelector('.btn-next');
+
+    let counter = 0;
+
+    btnPrev.addEventListener('click', () => {
+        counter--;
+        if (counter < 0) {
+            counter = slides.children.length - 1;
+        }
+        slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+    });
+
+    btnNext.addEventListener('click', () => {
+        counter++;
+        if (counter >= slides.children.length) {
+            counter = 0;
+        }
+        slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+    });
+</script>
+
+</body>
+</html>
